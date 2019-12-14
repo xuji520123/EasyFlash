@@ -1,10 +1,10 @@
 # EasyFlash 
 
-[![GitHub release](https://img.shields.io/github/release/armink/EasyFlash.svg)](https://github.com/armink/EasyFlash/releases/latest) [![GitHub commits](https://img.shields.io/github/commits-since/armink/EasyFlash/3.3.0.svg)](https://github.com/armink/EasyFlash/compare/3.3.0...master) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/armink/EasyFlash/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/armink/EasyFlash.svg)](https://github.com/armink/EasyFlash/releases/latest) [![GitHub commits](https://img.shields.io/github/commits-since/armink/EasyFlash/4.0.0.svg)](https://github.com/armink/EasyFlash/compare/4.0.0...master) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/armink/EasyFlash/master/LICENSE)
 
 ## 1、介绍（[English](#1-introduction)）
 
-[EasyFlash](https://github.com/armink/EasyFlash)是一款开源的轻量级嵌入式Flash存储器库，方便开发者更加轻松的实现基于Flash存储器的常见应用开发。非常适合智能家居、可穿戴、工控、医疗等需要断电存储功能的产品，资源占用极低，支持各种 MCU 片上存储器。该库主要包括 **三大实用功能** ：
+[EasyFlash](https://github.com/armink/EasyFlash)是一款开源的轻量级嵌入式Flash存储器库，方便开发者更加轻松的实现基于Flash存储器的常见应用开发。非常适合智能家居、可穿戴、工控、医疗、物联网等需要断电存储功能的产品，资源占用极低，支持各种 MCU 片上存储器。该库主要包括 **三大实用功能** ：
 
 - **ENV** 快速保存产品参数，支持 **写平衡（磨损平衡）** 及 **掉电保护** 功能
 
@@ -41,7 +41,7 @@ V4.0 设计及内部原理，V4.0 迁移指南等更多内容请继续阅读下�
 
 ### 1.3、支持平台
 
-目前已移植硬件平台有 `stm32f10x`与 `stm32f4xx` 系列的片内Flash，SPI Flash，这些也是笔者产品使用的平台。其余平台的移植难度不大，在项目的设计之初就有考虑针对所有平台的适配性问题（64位除外），所以对所有移植接口都有做预留。移植只需修改 [`\easyflash\port\ef_port.c`](https://github.com/armink/EasyFlash/blob/master/easyflash/port/ef_port.c) 一个文件，实现里面的擦、写、读及打印功能即可。
+目前已移植硬件平台有 `stm32f10x`与 `stm32f4xx` 系列的片内Flash，片外的 SPI Flash（基于 [SFUD](https://github.com/armink/SFUD)），这些也是笔者产品使用的平台。其余平台的移植难度不大，在项目的设计之初就有考虑针对所有平台的适配性问题（64位除外），所以对所有移植接口都有做预留。移植只需修改 [`\easyflash\port\ef_port.c`](https://github.com/armink/EasyFlash/blob/master/easyflash/port/ef_port.c) 一个文件，实现里面的擦、写、读及打印功能即可。
 
 欢迎大家 **fork and pull request**([Github](https://github.com/armink/EasyFlash)|[OSChina](http://git.oschina.net/armink/EasyFlash)|[Coding](https://coding.net/u/armink/p/EasyFlash/git)) 。如果觉得这个开源项目很赞，可以点击[项目主页](https://github.com/armink/EasyFlash) 右上角的 **Star**，同时把它推荐给更多有需要的朋友。
 
@@ -74,10 +74,10 @@ V4.0 设计及内部原理，V4.0 迁移指南等更多内容请继续阅读下�
 
 ## 3、文档
 
-- API 文档：[`\docs\zh\api.md`](/docs/zh/api.md)
-- 移植文档：[`\docs\zh\port.md`](/docs/zh/port.md)
-- V4.0 迁移指南：[`\docs\zh\v4_migrate.md`](/docs/zh/v4_migrate.md)
-- V4.0 ENV 功能设计与实现：[`\docs\zh\design.md`](/docs/zh/design.md)
+- API 文档：[`\docs\zh\api.md`](docs/zh/api.md)
+- 移植文档：[`\docs\zh\port.md`](docs/zh/port.md)
+- V4.0 迁移指南：[`\docs\zh\v4_migrate.md`](docs/zh/v4_migrate.md)
+- V4.0 ENV 功能设计与实现：[`\docs\zh\design.md`](docs/zh/design.md)
 
 务必保证在 **阅读文档** 后再移植使用。
 
@@ -85,7 +85,7 @@ V4.0 设计及内部原理，V4.0 迁移指南等更多内容请继续阅读下�
 
  ![support](/docs/zh/images/wechat_support.png)
 
-如果 EasyFlash 解决了你的问题，不妨请我 **喝杯咖啡**~ 
+如果 EasyFlash 解决了你的问题，不妨扫描上面二维码请我 **喝杯咖啡**~ 
 
 ## 5、许可
 

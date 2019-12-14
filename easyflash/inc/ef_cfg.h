@@ -40,6 +40,10 @@
  * Please change it when your firmware add a new ENV to default_env_set.
  */
 #define EF_ENV_VER_NUM            /* @note you must define it for a value, such as 0 */
+ 
+/* MCU Endian Configuration, default is Little Endian Order.
+/* #define EF_BIG_ENDIAN  */         
+
 #endif /* EF_USING_ENV */
 
 /* using IAP function */
@@ -52,7 +56,7 @@
 #define EF_ERASE_MIN_SIZE         /* @note you must define it for a value */
 
 /* the flash write granularity, unit: bit
- * only support 1(nor flash)/ 8(stm32f4)/ 32(stm32f1)/ 64(stm32l4) */
+ * only support 1(nor flash)/ 8(stm32f4)/ 32(stm32f1) */
 #define EF_WRITE_GRAN             /* @note you must define it for a value */
 
 /*
